@@ -149,7 +149,7 @@
         options = extend(defaults, customOptions);
 
         originals = clone(options); //deep copy
-        container = $(element);
+        container = element instanceof HTMLElement ? element : $(element);
 
         init(afterDomReady);
     }
